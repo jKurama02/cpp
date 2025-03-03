@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <cstdlib>
 #include "contact.hpp"
 
 #ifndef PHONEBOOK
@@ -18,23 +19,61 @@ class PhoneBook
 		{
 			contactsCount = 0;
 		}
+		void print_table()
+		{
+				std::cout << "---------------------------------------------\n";
+				std::cout << "|  Index  |First Name|Last Name | Nickname |\n";
+				std::cout << "---------------------------------------------\n";
+				int k = 0;
+				while(k < contactsCount)
+				{
+					contacts[k].printContactShort(contacts[k]);
+					k++;
+				}
+		};
+
+		void search_contact()
+		{
+			print_table();
+			std::string input;
+			std::cout << "Enter the index of the contact: ";
+			std::getline(std::cin, input);
+			int value = atoi(input.c_str());
+			std::cout << "contactsCount : " << contactsCount << "\n";
+			std::cout << "value : " << value << "\n";
+
+ 			if((value < 0 || value > 7) || value >= contactsCount)
+			{
+				std::cout << "Invalid index\n";
+				return;
+			}
+			else
+			{
+			std::cout << "First Name: " << contacts[value].getFirstName() << "\n";
+			std::cout << "Last Name: " << contacts[value].getLastName() << "\n";
+			std::cout << "Nickname: " << contacts[value].getNickname() << "\n";
+			std::cout << "Phone Number: " << contacts[value].getPhoneNumber() << "\n";
+			std::cout << "Darkest Secret: " << contacts[value].getDarkestSecret() << "\n";
+			}
+		}
 		void addContact()
 		{
 			Contact newContact;
 
-			// Check if the phonebook is full se lavora correttamente
-			if(contactsCount == 4)
+			if(contactsCount == 8)
 			{
-				std::cout << "PhoneBook is full, do you wanto to cancell the oldest contact ?\n";
 				std::string input;
+				std::cout << "PhoneBook is full, do you wanto to cancell the oldest contact ?\n";
 				std::getline(std::cin, input);
 				if("y" == input || "Y" == input)
 				{
-					for(int i = 0; i < 3; i++)
+					for(int i = 0; i < 7; i++)
 					{
 						contacts[i] = contacts[i + 1];
+						contacts[i].setId(i);
 					}
-					contacts[3] = newContact;
+					contactsCount--;
+					contacts[7] = newContact;
 				}
 				else if("n" == input || "N" == input)
 				{
@@ -71,15 +110,7 @@ class PhoneBook
 			std::getline(std::cin, input);
 			if("y" == input || "Y" == input)
 			{
-				std::cout << "---------------------------------------------\n";
-				std::cout << "|  Index  |First Name|Last Name | Nickname |\n";
-				std::cout << "---------------------------------------------\n";
-				int k;
-				while(k < contactsCount)
-				{
-					contacts[k].printContactShort(contacts[k]);
-					k++;
-				}
+				print_table();
 			}
 			else if("n" == input || "N" == input)
 			{

@@ -10,18 +10,22 @@ int main()
 	while(true)
 	{
 		std::cout << "Please enter a command (ADD, SEARCH, EXIT): ";
-		std::getline(std::cin, command);
-		if("ADD" == command)
+		if(!std::getline(std::cin, command))
+		{
+			return 0;
+		}
+		if("ADD" == command || "add" == command)
 		{
 			phoneBook.addContact();
 		}
-			else if("SEARCH" == command)
+			else if("SEARCH" == command || "search" == command)
 		{
-			std::cout << "chose SEARCH\n";
+			phoneBook.search_contact();
 		}
-		else if("EXIT" == command)
+		else if("EXIT" == command || "exit" == command)
 		{
-			std::cout << "chose EXIT\n";
+			std::cout << "EXIT\n";
+			return 0;
 		}
 		else
 		{
