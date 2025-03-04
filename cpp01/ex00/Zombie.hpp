@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
 
-class Zombie {
+class Zombie
+{
 	private:
 		std::string _name;
 	public:
-		Zombie(std::string name)
+		Zombie(){};
+		void set_name(std::string name)
 		{
 			_name = name;
 		};
@@ -13,6 +15,8 @@ class Zombie {
 		~Zombie()
 		{
 			std::cout << _name << " is dead" << std::endl;
-		}
+		};
 };
+		void randomChump( std::string name );
+		Zombie *newZombie(std::string name);
 
