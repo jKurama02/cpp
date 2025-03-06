@@ -1,3 +1,12 @@
 {
+	"files.associations": {
+		"iostream": "c",
+		"*.tcc": "c",
+		"iosfwd": "c",
+		"string": "c",
+		"unordered_map": "c",
+		"string_view": "c",
+		"ranges": "c"
+	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
