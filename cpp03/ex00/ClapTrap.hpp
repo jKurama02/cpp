@@ -1,0 +1,16 @@
+#include <string>
+#include <iostream>
+
+class ClapTrap
+{
+	private:
+		std::string _name;
+		int 		_hitpoint;
+		int			_energyPoints;
+		int 		_attackDamage;
+
+		public:
+			ClapTrap(std::string name);
+			~ClapTrap();
+			void attack(std::string const & target);
+};
