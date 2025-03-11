@@ -1,5 +1,4 @@
 #include "ScavTrap.hpp"
-#include <iostream>
 
 ScavTrap::ScavTrap() : ClapTrap(){
 	this->_gate = 0;

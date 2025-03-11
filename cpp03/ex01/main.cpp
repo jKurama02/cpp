@@ -3,8 +3,8 @@
 
 int main ()
 {
-	ClapTrap c("aldo");
-	ScavTrap f("giacomo");
-
+	ScavTrap a("palo");
+	a.attack("gino");
+	ScavTrap b(a);
 	return 0;
 }
