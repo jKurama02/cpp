@@ -1,10 +1,10 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main ()
 {
-	ClapTrap c("pino");
-	c.attack("timmy");
-	c.takeDamage(4);
-	c.beRepaired(2);
+	ClapTrap c("aldo");
+	ScavTrap f("giacomo");
+
 	return 0;
 }
