@@ -3,6 +3,7 @@
 
 #include "Warlock.hpp"
 #include "ASpell.hpp"
+#include <string>
 
 class Polymorph : public ASpell
 {

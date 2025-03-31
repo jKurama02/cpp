@@ -3,23 +3,30 @@
 #include <iostream>
 #include <string>
 #include <map>
-//________https://github.com/THE-Bandersnatch/EXAM-CPP/blob/master/examRank05/cpp_module00/Warlock.hpp
-// sto tizio mette il costruttore di copia e di assegnazione privati
+#include "SpellBook.hpp"
+#include "ASpell.hpp"
+#include "ATarget.hpp"
+
+
 class ASpell;
 class ATarget;
+class SpellBook;
+
+
+
 
 class Warlock
 {
 	private:
+		Warlock(const Warlock& other);
+		Warlock& operator=(const Warlock& other);
 		std::string name;
 		std::string title;
-		std::map <std::string, ASpell*> spellBook;
+		SpellBook spellofbook;
 
 	public:
 		Warlock();
 		Warlock(std::string n, std::string t);
-		Warlock(const Warlock& other);
-		Warlock& operator=(const Warlock& other);
 		~Warlock();
 
 		const std::string& getName() const;

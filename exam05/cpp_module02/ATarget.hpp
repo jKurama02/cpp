@@ -1,8 +1,7 @@
 #ifndef ATARGET_HPP
 #define ATARGET_HPP
-#include "Warlock.hpp"
 #include "ASpell.hpp"
-
+#include <string>
 class ASpell;
 
 
@@ -14,7 +13,7 @@ class ATarget
 		ATarget(std::string t);
 		ATarget(const ATarget& other);
 		ATarget& operator=(const ATarget& other);
-		~ATarget();
+		virtual ~ATarget();
 
 		virtual ATarget* clone() const = 0;
 		std::string getType() const;

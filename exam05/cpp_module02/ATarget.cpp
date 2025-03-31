@@ -1,4 +1,5 @@
 #include "ATarget.hpp"
+#include <iostream>
 
 ATarget::ATarget(std::string t) : type(t){};
 

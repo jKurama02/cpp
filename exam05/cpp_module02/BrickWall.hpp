@@ -1,6 +1,7 @@
 #ifndef BRICKWALL_HPP
 #define BRICKWALL_HPP
 #include "ATarget.hpp"
+#include <string>
 
 class ATarget;
 

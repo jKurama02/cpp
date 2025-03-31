@@ -1,6 +1,7 @@
 #ifndef ASPELL_HPP
 #define ASPELL_HPP
-#include "Warlock.hpp"
+#include <string>
+
 #include "ATarget.hpp"
 
 class ATarget;

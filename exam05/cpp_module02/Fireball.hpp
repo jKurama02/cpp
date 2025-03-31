@@ -1,5 +1,6 @@
 #ifndef FIREBALL_HPP
 #define FIREBALL_HPP
+#include <string>
 
 #include "Warlock.hpp"
 #include "ASpell.hpp"
