@@ -2,7 +2,7 @@ NAME = ex02
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp ASpell.cpp Fwoosh.cpp ATarget.cpp Dummy.cpp Warlock.cpp
+SRC = main.cpp ASpell.cpp Fwoosh.cpp ATarget.cpp Dummy.cpp Warlock.cpp Fireball.hpp Polymorph.cpp BrickWall.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
