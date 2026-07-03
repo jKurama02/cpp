@@ -1,4 +1,3 @@
-#include <cmath>
 #include <iostream>
 #include <limits>
 #include "ScalarConverter.hpp"
@@ -25,4 +24,3 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-
