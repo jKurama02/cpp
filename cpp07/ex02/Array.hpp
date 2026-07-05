@@ -21,7 +21,7 @@ class Array
 
 		T getItem(int g);
 
-		unsigned int size();
+		unsigned int size() const;
 		~Array();
 };
 
